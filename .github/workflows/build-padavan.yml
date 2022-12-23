@@ -117,9 +117,9 @@ jobs:
         #格式如下：
         #sed -i '/自定义项/d' .config
         #echo "自定义项=y" >> .config
-        #sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
-        #sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIEAP/d' .config
-        #sed -i '/CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_DOGCOM/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_MINIEAP/d' .config
+        sed -i '/CONFIG_FIRMWARE_INCLUDE_NJIT_CLIENT/d' .config
         #########################################################################################
         sudo ./clear_tree
         sudo ./build_firmware_modify $TNAME 0
